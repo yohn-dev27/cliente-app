@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Buscar Cliente</h1>
+    <form [formGroup]="form">
+      <label for="tipoDocumento">Tipo de Documento</label>
+      <select id="tipoDocumento" formControlName="tipoDocumento">
+        <option value="" disabled selected>Seleccione una opción</option>
+        <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+        <option value="Pasaporte">Pasaporte</option>
+      </select>
+  
+      <label for="numeroDocumento">Número de Documento</label>
+      <input
+        id="numeroDocumento"
+        type="text"
+        formControlName="numeroDocumento"
+        placeholder="Ingrese el número de documento"
+      />
+  
+      <button type="button" [disabled]="!isFormValid" (click)="buscar()">Buscar</button>
+    </form>
+  </div>
